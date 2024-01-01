@@ -35,7 +35,7 @@ Users should be able to:
 - [chatGPT](https://chat.openai.com/) - This helped especially on the javascript side. I try not to depend on it as much and rather to find my own way so that i can learn.
 
 - Frontend Mentor - [Frontend Mentor profile](https://www.frontendmentor.io/profile/CSS-Viki)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Site](https://launch-countdown-timer-6pon.onrender.com)
 
 Made with ❤️ by [Viki Wainaina](https://twitter.com/vykiddeh_)
 
