@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+$font-family-default: "Red Hat Text", sans-serif;
+
+$Grayish-blue: hsl(237, 18%, 59%);
+$Soft-red: hsl(345, 95%, 68%);
+$White: hsl(0, 0%, 100%);
+$Dark-desaturated-blue: hsl(236, 21%, 26%);
+$Very-dark-blue: hsl(235, 16%, 14%);
+$Very-dark-blue-mostlyblack: hsl(234, 17%, 12%);
+
+$Font-size: 0.875rem; //14px
+
+@import "components/resets";
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timer-stamps-design {
+  @extend .flex-item;
+  background-color: $Dark-desaturated-blue;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 0px 0px $Very-dark-blue-mostlyblack;
+  -webkit-box-shadow: 0px 10px 0px 0px $Very-dark-blue-mostlyblack;
+  -moz-box-shadow: 0px 10px 0px 0px $Very-dark-blue-mostlyblack;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: $Soft-red;
+}
+.before-element {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 60%;
+  background-color: $Very-dark-blue-mostlyblack;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  opacity: 0.3;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-size: $Font-size;
+  font-family: $font-family-default;
+  background: linear-gradient(
+    to bottom,
+    $Very-dark-blue-mostlyblack,
+    $Dark-desaturated-blue
+  );
+}
+.stars {
+  position: absolute;
+  background: url(images/bg-stars.svg);
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 30%;
+  
+}
+
+@import "components/main";
+@import "components/footer";
+
+@media (max-width: 30em) {
+}

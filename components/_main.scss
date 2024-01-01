@@ -1,0 +1,93 @@
+main {
+  @extend .flex-item;
+  padding-block-start: 80px;
+  gap: 50px;
+
+  .tagline {
+    color: $White;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .timer-stamps {
+    @extend .flex-item;
+    flex-direction: row;
+    gap: 30px;
+
+    .day-stamp,
+    .hour-stamp,
+    .minute-stamp,
+    .second-stamp {
+      @extend .flex-item;
+      position: relative;
+      gap: 20px;
+    }
+    .day-stamp {
+      span {
+        @extend .timer-stamps-design;
+      }
+      span::before {
+        @extend .before-element;
+      }
+
+      div {
+        @extend .flex-item;
+
+        p {
+          color: $Grayish-blue;
+          font-size: 0.6875rem;
+          letter-spacing: 4px;
+        }
+      }
+    }
+    .hour-stamp {
+      span {
+        @extend .timer-stamps-design;
+      }
+      span::before {
+        @extend .before-element;
+      }
+      p {
+        color: $Grayish-blue;
+        font-size: 0.6875rem;
+        letter-spacing: 4px;
+      }
+    }
+    .minute-stamp {
+      span {
+        @extend .timer-stamps-design;
+      }
+      span::before {
+        @extend .before-element;
+      }
+      p {
+        color: $Grayish-blue;
+        font-size: 0.6875rem;
+        letter-spacing: 4px;
+      }
+    }
+    .second-stamp {
+      span {
+        @extend .timer-stamps-design;
+      }
+      span::before {
+        @extend .before-element;
+      }
+      p {
+        color: $Grayish-blue;
+        font-size: 0.6875rem;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+@media (max-width: 30em) {
+  main {
+    .tagline {
+      max-width: 250px;
+    }
+    
+  }
+}
