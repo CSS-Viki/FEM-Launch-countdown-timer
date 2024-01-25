@@ -22,13 +22,13 @@ $Font-size: 0.875rem; //14px
 .timer-stamps-design {
   @extend .flex-item;
   background-color: $Dark-desaturated-blue;
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 8px;
   box-shadow: 0px 10px 0px 0px $Very-dark-blue-mostlyblack;
   -webkit-box-shadow: 0px 10px 0px 0px $Very-dark-blue-mostlyblack;
   -moz-box-shadow: 0px 10px 0px 0px $Very-dark-blue-mostlyblack;
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: $Soft-red;
 }
@@ -38,7 +38,7 @@ $Font-size: 0.875rem; //14px
   top: 0;
   right: 0;
   left: 0;
-  bottom: 60%;
+  bottom: 55%;
   background-color: $Very-dark-blue-mostlyblack;
   border-radius: 8px;
   border-bottom-right-radius: 0;
@@ -64,11 +64,22 @@ body {
   left: 0;
   top: 0;
   bottom: 30%;
-  
+}
+.bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  img {
+    width: 100%;
+  }
 }
 
 @import "components/main";
 @import "components/footer";
 
-@media (max-width: 30em) {
+@media (max-width: 37.5em) {
+  .bg-img {
+    display: none;
+  }
 }

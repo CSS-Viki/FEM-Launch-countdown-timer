@@ -17,36 +17,45 @@ svg {
   max-width: 100%;
 }
 
-.flex-item, .attribution .credits, .attribution, main .timer-stamps .day-stamp div, main .timer-stamps .day-stamp,
+.flex-item, .attribution .credits, .attribution, main .timer-stamps .day-stamp,
 main .timer-stamps .hour-stamp,
 main .timer-stamps .minute-stamp,
-main .timer-stamps .second-stamp, main .timer-stamps, main, .timer-stamps-design, main .timer-stamps .second-stamp span, main .timer-stamps .minute-stamp span, main .timer-stamps .hour-stamp span, main .timer-stamps .day-stamp span {
+main .timer-stamps .second-stamp, main .timer-stamps, main, .timer-stamps-design, main .timer-stamps .day-stamp span,
+main .timer-stamps .hour-stamp span,
+main .timer-stamps .minute-stamp span,
+main .timer-stamps .second-stamp span {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.timer-stamps-design, main .timer-stamps .second-stamp span, main .timer-stamps .minute-stamp span, main .timer-stamps .hour-stamp span, main .timer-stamps .day-stamp span {
+.timer-stamps-design, main .timer-stamps .day-stamp span,
+main .timer-stamps .hour-stamp span,
+main .timer-stamps .minute-stamp span,
+main .timer-stamps .second-stamp span {
   background-color: hsl(236, 21%, 26%);
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 8px;
   box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
   -webkit-box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
   -moz-box-shadow: 0px 10px 0px 0px hsl(234, 17%, 12%);
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 700;
   color: hsl(345, 95%, 68%);
 }
 
-.before-element, main .timer-stamps .second-stamp span::before, main .timer-stamps .minute-stamp span::before, main .timer-stamps .hour-stamp span::before, main .timer-stamps .day-stamp span::before {
+.before-element, main .timer-stamps .day-stamp span::before,
+main .timer-stamps .hour-stamp span::before,
+main .timer-stamps .minute-stamp span::before,
+main .timer-stamps .second-stamp span::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  bottom: 60%;
+  bottom: 55%;
   background-color: hsl(234, 17%, 12%);
   border-radius: 8px;
   border-bottom-right-radius: 0;
@@ -71,15 +80,24 @@ body {
   bottom: 30%;
 }
 
+.bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.bg-img img {
+  width: 100%;
+}
+
 main {
-  padding-block-start: 80px;
+  padding-block-start: 150px;
   gap: 50px;
 }
 main .tagline {
   color: hsl(0, 0%, 100%);
   text-transform: uppercase;
   letter-spacing: 4px;
-  text-align: center;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -94,60 +112,73 @@ main .timer-stamps .second-stamp {
   position: relative;
   gap: 20px;
 }
-main .timer-stamps .day-stamp div p {
+main .timer-stamps .day-stamp div p,
+main .timer-stamps .hour-stamp div p,
+main .timer-stamps .minute-stamp div p,
+main .timer-stamps .second-stamp div p {
   color: hsl(237, 18%, 59%);
-  font-size: 0.6875rem;
-  letter-spacing: 4px;
-}
-main .timer-stamps .hour-stamp p {
-  color: hsl(237, 18%, 59%);
-  font-size: 0.6875rem;
-  letter-spacing: 4px;
-}
-main .timer-stamps .minute-stamp p {
-  color: hsl(237, 18%, 59%);
-  font-size: 0.6875rem;
-  letter-spacing: 4px;
-}
-main .timer-stamps .second-stamp p {
-  color: hsl(237, 18%, 59%);
-  font-size: 0.6875rem;
+  font-size: 1rem;
   letter-spacing: 4px;
 }
 
-@media (max-width: 30em) {
-  main .tagline {
-    max-width: 250px;
+@media (max-width: 37.5em) {
+  main .timer-stamps {
+    flex-direction: column;
   }
 }
 .attribution {
-  background: url(images/pattern-hills.svg);
-  background-repeat: no-repeat;
-  background-position: top;
   gap: 30px;
-  margin-block-start: 100px;
-  width: 100%;
-  height: 200px;
 }
-.attribution .social-icons i {
+.attribution .social-icons,
+.attribution .credits {
+  position: absolute;
+  z-index: 9999;
+}
+.attribution .social-icons {
+  bottom: 100px;
+}
+.attribution .social-icons .fa-brands {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.attribution .social-icons i:hover {
+.attribution .social-icons .fa-brands:hover {
   color: hsl(345, 95%, 68%);
 }
-.attribution .social-icons .fa-pinterest {
-  margin-inline: 30px;
+.attribution .social-icons .fa-brands + .fa-brands {
+  margin-left: 30px;
 }
 .attribution p {
   font-size: 0.6rem;
   color: hsl(0, 0%, 100%);
 }
 .attribution .credits {
+  bottom: 50px;
   flex-direction: row;
   gap: 3px;
 }
 
 .attribution a {
   color: hsl(345, 95%, 68%);
+}
+
+@media (max-width: 37.5em) {
+  .attribution {
+    gap: 20px;
+    margin-block-start: 5em;
+  }
+  .attribution .social-icons,
+  .attribution .credits {
+    position: relative;
+  }
+  .attribution .social-icons {
+    bottom: 0;
+  }
+  .attribution .credits {
+    bottom: 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .bg-img {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
